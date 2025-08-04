@@ -1,2 +1,2 @@
 # MovieSearch
-A website to search for movies
+A website to search for movies and tv shows
