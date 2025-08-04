@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MovieSearch</title>
+    <script
+      src="https://kit.fontawesome.com/4d67784e9a.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="logo">
+        <div class="container">
+          <p class="website__logo">MovieSearch</p>
+        </div>
+      </div>
+      <div class="search__container">
+        <div class="search__element">
+          <h3 class="search__title">Search Movie:</h3>
+          <div class="search__input--container">
+            <input
+              type="text"
+              class="movie__search--box"
+              id="movie__search--box"
+              placeholder="Search for a movie"
+              onkeypress="handleKeyPress(event)"
+            />
+            <button class="search__button" onclick="findMovies()">
+              <i class="fas fa-search"></i>
+            </button>
+          </div>
+          <div
+            class="filter__container"
+            id="filter__container"
+            style="display: none"
+          >
+            <select
+              class="sort__filter"
+              id="sort__filter"
+              onchange="sortMovies()"
+            >
+              <option value="" disabled selected>Sort by...</option>
+              <option value="highest">Highest Rated</option>
+              <option value="lowest">Lowest Rated</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="result__container">
+          <div class="result__grid" id="result__grid"></div>
+        </div>
+      </div>
+    </div>
+    <script src="./movie.js"></script>
+  </body>
+</html>

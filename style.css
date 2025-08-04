@@ -1,0 +1,243 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+.wrapper {
+  min-height: 100vh;
+  background-color: black;
+}
+
+.wrapper .container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.search__container {
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo {
+  padding: 16px 0;
+}
+
+.website__logo {
+  font-size: 32px;
+  color: #fff;
+  font-weight: bold;
+  color: #8ace00;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.search__element {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+}
+
+.search__title {
+  align-self: center;
+  margin-right: 16px;
+  font-size: 24px;
+  color: #fff;
+  font-weight: 500;
+  margin-bottom: 24px;
+}
+
+.search__element {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.search__input--container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.movie__search--box {
+  padding: 16px 32px;
+  font-size: 16px;
+  border: none;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  outline: none;
+  width: 300px;
+}
+
+.search__button {
+  padding: 16px 24px;
+  font-size: 16px;
+  background-color: #8ace00;
+  border: none;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  color: black;
+  cursor: pointer;
+  transition: background-color 200ms ease;
+}
+
+.search__button:hover {
+  background-color: #578300;
+}
+
+.filter__container {
+  text-align: center;
+}
+
+.sort__filter {
+  padding: 8px 16px;
+  font-size: 14px;
+  border: none;
+  border-radius: 4px;
+  background-color: #333;
+  color: #fff;
+  cursor: pointer;
+  outline: none;
+}
+
+.sort__filter:hover {
+  background-color: #444;
+}
+
+.result__container {
+  padding: 48px 0;
+}
+
+.search__result--item {
+  background-color: black;
+  padding: 24px;
+  width: 100%;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 200ms ease;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+}
+
+.search__result--item:hover {
+  background-color: #1f1f1f;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.search__result--img {
+  width: 128px;
+  height: 170px;
+  object-fit: cover;
+  margin-right: 24px;
+  border-radius: 6px;
+}
+
+.search__result--title {
+  font-weight: 600;
+  font-size: 16px;
+  margin-bottom: 8px;
+  color: #8ace00;
+}
+
+.search__result--year {
+  font-size: 16px;
+  margin-top: 8px;
+  font-weight: 600;
+  opacity: 0.8;
+}
+
+.search__result--rating {
+  color: #8ace00;
+  font-weight: 700;
+  margin-top: 4px;
+}
+
+@media (min-width: 800px) {
+  .search__element {
+    flex-direction: row;
+  }
+
+  .search__title {
+    margin-bottom: 0;
+  }
+
+  .result__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .website__logo {
+    font-size: 32px;
+    text-align: center;
+  }
+
+  .search__input--container {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .movie__search--box {
+    width: 90%;
+    margin: 0 auto;
+    padding: 8px 16px;
+    border-radius: 3px;
+  }
+
+  .search__button {
+    width: 90%;
+    margin: 0 auto;
+    padding: 8px 16px;
+    border-radius: 3px;
+  }
+
+  .search__title {
+    font-size: 20px;
+    margin-right: 0;
+  }
+
+  .result__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .search__result--item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .search__result--img {
+    margin-right: 0;
+  }
+
+  .search__result--info {
+    margin-top: 10px;
+    text-align: center;
+  }
+}
